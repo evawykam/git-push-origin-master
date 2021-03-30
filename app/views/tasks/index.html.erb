@@ -1,0 +1,9 @@
+<h1>Welcome to THE TASK MANAGER</h1>
+
+<%= link_to "Add a new task", new_task_path %>
+<% @tasks.each do|t| %>
+<%#= link_to "Text that will have a link", 'the actual path'  %>
+  <h2> <%= link_to t.title, task_path(t) %> </h2>
+  <p> <%= t.details %> </p>
+  <p> <%= t.complete %> </p>
+<% end %>
